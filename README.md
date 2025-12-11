@@ -59,7 +59,7 @@ Le notebook va :
 5. ✅ Générer des graphiques de résultats
 
 **Résultats attendus :**
-- Accuracy sur le test : ~98-99%
+- Accuracy sur le test : ~99.5%
 - Temps d'entraînement : 5-10 minutes (CPU) / 1-2 minutes (GPU)
 
 ### 2. Tester l'application web
@@ -111,7 +111,7 @@ Le modèle CNN est composé de :
 
 ## 📊 Performances
 
-- **Accuracy sur le test :** ~98-99%
+- **Accuracy sur le test :** ~99.5%
 - **Loss finale :** ~0.03-0.05
 - **Taille du modèle ONNX :** ~1.2 MB
 - **Temps d'inférence (web) :** <100ms
@@ -130,37 +130,6 @@ Le modèle CNN est composé de :
   - JavaScript ES6
   - ONNX Runtime Web
 
-## 📝 Améliorations Possibles
-
-- [ ] Ajouter un mode d'augmentation de données
-- [ ] Tester d'autres architectures (ResNet, VGG)
-- [ ] Implémenter la détection de plusieurs chiffres
-- [ ] Ajouter un mode de dessin avec différentes couleurs
-- [ ] Créer une API REST avec Flask/FastAPI
-- [ ] Déployer sur Heroku/Vercel/Netlify
-
-## 🐛 Dépannage
-
-**Le modèle ne se charge pas :**
-- Vérifiez que le fichier `model.onnx` existe dans le répertoire
-- Exécutez d'abord le notebook pour générer le modèle
-- Consultez la console du navigateur pour les erreurs
-
-**Les prédictions sont incorrectes :**
-- Assurez-vous de dessiner des chiffres clairs et centrés
-- Le modèle fonctionne mieux avec des traits épais
-- Évitez de dessiner trop petit ou trop près des bords
-
-**Erreurs d'installation :**
-```bash
-# Mettez à jour pip
-pip install --upgrade pip
-
-# Installez les dépendances une par une en cas d'erreur
-pip install torch torchvision
-pip install onnx onnxruntime
-pip install numpy matplotlib jupyter
-```
 
 ## 📄 Licence
 
