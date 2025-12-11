@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détecteur de Chiffres - IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Détecteur de Chiffres Manuscrits</h1>
+            <p class="subtitle">Intelligence Artificielle avec PyTorch & ONNX</p>
+        </header>
+
+        <main>
+            <div class="canvas-section">
+                <h2>✍️ Dessinez un chiffre (0-9)</h2>
+                <div class="canvas-wrapper">
+                    <canvas id="drawCanvas" width="280" height="280"></canvas>
+                </div>
+                <div class="controls">
+                    <button id="clearBtn" class="btn btn-clear">🗑️ Effacer</button>
+                    <button id="predictBtn" class="btn btn-predict">🔮 Prédire</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h2>📊 Résultats</h2>
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Chargement du modèle...</p>
+                </div>
+                <div id="prediction" class="prediction">
+                    <div class="prediction-digit">
+                        <span id="predictedDigit">-</span>
+                    </div>
+                    <div class="confidence">
+                        <p>Confiance: <strong id="confidence">-</strong></p>
+                    </div>
+                </div>
+                <div class="probabilities">
+                    <h3>Probabilités par chiffre</h3>
+                    <div id="probabilityBars"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="info">
+                <h3>ℹ️ À propos</h3>
+                <p>Ce projet utilise un réseau de neurones convolutif (CNN) entraîné sur le dataset MNIST.</p>
+                <p>Le modèle PyTorch a été exporté au format ONNX pour une inférence rapide dans le navigateur.</p>
+                <p><strong>Technos:</strong> PyTorch, ONNX Runtime Web, HTML5 Canvas, JavaScript ES6</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ONNX Runtime Web -->
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
